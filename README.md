@@ -1,38 +1,38 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Next.js URL Shortener
+This is a simple URL shortener app built with Next.js and MongoDB. It allows users to create short URLs for long links and share them with others.
 
 ## Getting Started
+To run this app locally, you'll need to have Node.js and MongoDB installed on your machine. You can then follow these steps:
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+1. Clone this repository to your local machine using git clone https://github.com/your-username/nextjs-url-shortener.git
+2. Navigate to the project directory using cd nextjs-url-shortener
+3. Install the dependencies using npm install
+4. Create a .env.local file in the project root and add the following environment variables:
+makefile
+5. Copy code
+``` env
+MONGODB_URI=<your-mongodb-uri>
+MONGODB_DB=<your-mongodb-database-name>
 ```
+4. Start the app using npm run dev
+5. Open your web browser and navigate to http://localhost:3000
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Usage
+To create a short URL, enter the long link into the input field on the home page and click the "Shorten" button. The app will generate a unique shortened URL that you can copy and share with others.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+To view the list of all shortened URLs, navigate to the "/urls" page using the link in the navigation menu. From there, you can click on the "Edit" button to update the long link or "Delete" button to remove the shortened URL.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+To use a shortened URL, simply enter it into the address bar of your web browser and press Enter. You will be redirected to the original long link.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Architecture
+This app is built with Next.js, a popular React-based framework for building server-side-rendered (SSR) web applications. The frontend is built using Chakra UI, a component library for React that provides a set of customizable UI components.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+The backend is built with Node.js and Express, and uses MongoDB as the database. The app uses the mongoose library to interact with the MongoDB database and store and retrieve shortened URLs.
 
-## Learn More
+The app is deployed on Heroku, a cloud platform that allows you to deploy, manage, and scale your apps. The deployment process is automated using GitHub Actions, a continuous integration and continuous deployment (CI/CD) tool.
 
-To learn more about Next.js, take a look at the following resources:
+## Contributing
+If you would like to contribute to this project, you can fork this repository and submit a pull request with your changes. Please make sure to follow the existing coding style and conventions.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## License
+This project is licensed under the MIT License - see the LICENSE.md file for details.
