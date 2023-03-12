@@ -67,14 +67,18 @@ export default function Home() {
         </Text>
       )}
 
-      {/* <FormControl onSubmit={handleSubmit}>
-        <FormLabel>Enter URL to shorten:</FormLabel> */}
+     <FormControl 
+    //  onSubmit={handleSubmit}
+    p={'10px'}
+     >
+        <FormLabel>Enter URL to shorten:</FormLabel>
         <Input
           type="text"
           placeholder="https://example.com"
           value={url}
           onChange={(e) => setUrl(e.target.value)}
           mb={2}
+          w={['90vw', '', '40vw']}
         />
 
         <Button  onClick={handleSubmit} colorScheme="teal" size="md">
@@ -83,7 +87,7 @@ export default function Home() {
             isLoading ? <Text>Shortening...</Text> : <Text>Shorten</Text>
           }
         </Button>
-      {/* </FormControl> */}
+      </FormControl>
     </VStack>
   );
 }
